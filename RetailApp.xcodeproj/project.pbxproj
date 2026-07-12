@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D61214A43003829600C99261 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = D61214A33003829600C99261 /* LICENSE */; };
 		D6A6DB673002873C0007F45F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D6A6DB663002873C0007F45F /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +22,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D61214A33003829600C99261 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		D618BE053000D58C00DE7B42 /* RetailApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A6DB663002873C0007F45F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D6B000013100000000000001 /* RetailAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetailAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +66,7 @@
 				D6B000023100000000000002 /* RetailAppTests */,
 				D618BE063000D58C00DE7B42 /* Products */,
 				D6A6DB663002873C0007F45F /* README.md */,
+				D61214A33003829600C99261 /* LICENSE */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6A6DB673002873C0007F45F /* README.md in Resources */,
+				D61214A43003829600C99261 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
