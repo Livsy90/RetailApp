@@ -6,12 +6,12 @@ enum HomeUpdate: Sendable {
 }
 
 struct HomeRepository: Sendable {
-    let api: HomeAPIClient
-    let cache: HomeCache
-    let context: HomeCacheKey
-    let refreshCoordinator: HomeRefreshCoordinator
-    let now: @Sendable () -> Date
-    let observeContractIssues: @Sendable ([HomeContractIssue]) -> Void
+    private let api: HomeAPIClient
+    private let cache: HomeCache
+    private let context: HomeCacheKey
+    private let refreshCoordinator: HomeRefreshCoordinator
+    private let now: @Sendable () -> Date
+    private let observeContractIssues: @Sendable ([HomeContractIssue]) -> Void
 
     init(
         api: HomeAPIClient,
