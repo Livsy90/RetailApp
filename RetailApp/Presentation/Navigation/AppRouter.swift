@@ -1,4 +1,4 @@
-import Observation
+import Foundation
 
 enum AppSheet: String, Identifiable, Sendable {
     case cart

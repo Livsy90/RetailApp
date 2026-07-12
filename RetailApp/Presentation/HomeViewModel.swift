@@ -1,5 +1,4 @@
 import Foundation
-import Observation
 
 enum Freshness: Equatable {
     case none
