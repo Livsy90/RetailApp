@@ -6,8 +6,24 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D6A6DB673002873C0007F45F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = D6A6DB663002873C0007F45F /* README.md */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D6B0000A310000000000000A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D618BDFD3000D58C00DE7B42 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D618BE043000D58C00DE7B42;
+			remoteInfo = RetailApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		D618BE053000D58C00DE7B42 /* RetailApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetailApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6A6DB663002873C0007F45F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		D6B000013100000000000001 /* RetailAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RetailAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +32,22 @@
 			path = RetailApp;
 			sourceTree = "<group>";
 		};
+		D6B000023100000000000002 /* RetailAppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = RetailAppTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		D618BE023000D58C00DE7B42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6B000053100000000000005 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,7 +61,9 @@
 			isa = PBXGroup;
 			children = (
 				D618BE073000D58C00DE7B42 /* RetailApp */,
+				D6B000023100000000000002 /* RetailAppTests */,
 				D618BE063000D58C00DE7B42 /* Products */,
+				D6A6DB663002873C0007F45F /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -41,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				D618BE053000D58C00DE7B42 /* RetailApp.app */,
+				D6B000013100000000000001 /* RetailAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +101,29 @@
 			productReference = D618BE053000D58C00DE7B42 /* RetailApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		D6B000033100000000000003 /* RetailAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D6B000093100000000000009 /* Build configuration list for PBXNativeTarget "RetailAppTests" */;
+			buildPhases = (
+				D6B000043100000000000004 /* Sources */,
+				D6B000053100000000000005 /* Frameworks */,
+				D6B000063100000000000006 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D6B0000B310000000000000B /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D6B000023100000000000002 /* RetailAppTests */,
+			);
+			name = RetailAppTests;
+			packageProductDependencies = (
+			);
+			productName = RetailAppTests;
+			productReference = D6B000013100000000000001 /* RetailAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +136,10 @@
 				TargetAttributes = {
 					D618BE043000D58C00DE7B42 = {
 						CreatedOnToolsVersion = 26.6;
+					};
+					D6B000033100000000000003 = {
+						CreatedOnToolsVersion = 26.6;
+						TestTargetID = D618BE043000D58C00DE7B42;
 					};
 				};
 			};
@@ -100,12 +158,21 @@
 			projectRoot = "";
 			targets = (
 				D618BE043000D58C00DE7B42 /* RetailApp */,
+				D6B000033100000000000003 /* RetailAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D618BE033000D58C00DE7B42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6A6DB673002873C0007F45F /* README.md in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D6B000063100000000000006 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +189,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D6B000043100000000000004 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D6B0000B310000000000000B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D618BE043000D58C00DE7B42 /* RetailApp */;
+			targetProxy = D6B0000A310000000000000A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		D618BE0E3000D58D00DE7B42 /* Debug */ = {
@@ -276,7 +358,7 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
@@ -320,12 +402,46 @@
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
-				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
 				XROS_DEPLOYMENT_TARGET = 26.5;
+			};
+			name = Release;
+		};
+		D6B000073100000000000007 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				PRODUCT_BUNDLE_IDENTIFIER = livsycode.RetailAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetailApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RetailApp";
+			};
+			name = Debug;
+		};
+		D6B000083100000000000008 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.5;
+				PRODUCT_BUNDLE_IDENTIFIER = livsycode.RetailAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = nonisolated;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RetailApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/RetailApp";
 			};
 			name = Release;
 		};
@@ -346,6 +462,15 @@
 			buildConfigurations = (
 				D618BE113000D58D00DE7B42 /* Debug */,
 				D618BE123000D58D00DE7B42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D6B000093100000000000009 /* Build configuration list for PBXNativeTarget "RetailAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D6B000073100000000000007 /* Debug */,
+				D6B000083100000000000008 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
