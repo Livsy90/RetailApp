@@ -1,6 +1,6 @@
 # RetailApp
 
-An executable iOS companion project for a system design discussion about a dynamic, campaign-driven retail home page.
+An executable iOS companion project for a [system design discussion](https://www.youtube.com/watch?v=gw53PnF5pNQ) about a dynamic, campaign-driven retail home page.
 
 The project shows how several ideas from an iOS system design interview can be translated into working Swift code:
 
