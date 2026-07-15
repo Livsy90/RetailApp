@@ -6,7 +6,6 @@ enum AppSheet: String, Identifiable, Sendable {
     var id: String { rawValue }
 }
 
-/// App-session navigation state. Feature coordinators own destination rendering.
 @MainActor
 @Observable
 final class AppRouter {

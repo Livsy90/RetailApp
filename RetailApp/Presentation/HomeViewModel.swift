@@ -75,19 +75,27 @@ final class HomeViewModel {
     }
 
     func trackSelection(_ tracking: TrackingContext) {
-        Task { await analytics.track(.tap(tracking)) }
+        Task {
+            await analytics.track(.tap(tracking))
+        }
     }
 
     func itemBecameVisible(_ tracking: TrackingContext) {
         let key = [tracking.requestID, tracking.sectionID, tracking.itemID ?? "section"].joined(separator: ":")
+        
         guard recordedImpressions.insert(key).inserted else { return }
+        
         impressionOrder.append(key)
+        
         if impressionOrder.count > impressionLimit {
             let overflow = impressionOrder.count - impressionLimit
             recordedImpressions.subtract(impressionOrder.prefix(overflow))
             impressionOrder.removeFirst(overflow)
         }
-        Task { await analytics.track(.impression(tracking)) }
+        
+        Task {
+            await analytics.track(.impression(tracking))
+        }
     }
 
     func searchQueryChanged(_ query: String) {

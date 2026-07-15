@@ -50,15 +50,32 @@ struct RemoteImage: View {
     private var placeholderView: some View {
         switch placeholder {
         case .hero:
-            LinearGradient(colors: [.indigo, .purple], startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(
+                colors: [.indigo, .purple],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
         case .campaign:
-            LinearGradient(colors: [.teal, .blue], startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(
+                colors: [.teal, .blue],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
         case .product:
-            Color.gray.opacity(0.15).overlay { Image(systemName: "photo") }
+            Color.gray
+                .opacity(0.15)
+                .overlay {
+                Image(systemName: "photo")
+            }
         case .recommendation:
-            Color.purple.opacity(0.12).overlay { Image(systemName: "sparkles") }
+            Color.purple
+                .opacity(0.12)
+                .overlay {
+                Image(systemName: "sparkles")
+            }
         case .editorial:
-            Color.brown.opacity(0.12)
+            Color.brown
+                .opacity(0.12)
         }
     }
 

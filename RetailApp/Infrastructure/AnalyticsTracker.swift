@@ -46,12 +46,14 @@ actor AnalyticsTracker {
 
     nonisolated func enqueueContractIssues(_ issues: [HomeContractIssue]) {
         guard !issues.isEmpty else { return }
-        Task { await recordContractIssues(issues) }
+        Task {
+            await recordContractIssues(issues)
+        }
     }
 
     private func recordContractIssues(_ issues: [HomeContractIssue]) {
-        for issue in issues {
-            track(.contractIssue(issue))
+        issues.forEach {
+            track(.contractIssue($0))
         }
     }
 }

@@ -7,8 +7,6 @@ struct HomeFlowCoordinator: View {
     let imagePipeline: ImagePipeline
 
     var body: some View {
-        @Bindable var router = router
-
         NavigationStack(path: $router.path) {
             HomeFeatureCoordinator(
                 viewModel: viewModel,

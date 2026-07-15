@@ -16,9 +16,11 @@ actor ImagePipeline {
 
     func image(url: URL, targetSize: CGSize, scale: CGFloat) async throws -> LoadedImage {
         let key = Self.key(url: url, targetSize: targetSize, scale: scale)
+        
         if let cached = memoryCache.object(forKey: key as NSString) {
             return LoadedImage(image: cached)
         }
+        
         if let task = inFlight[key] {
             return try await task.value
         }
@@ -33,6 +35,7 @@ actor ImagePipeline {
             let image = try Self.downsample(data: data, targetSize: targetSize, scale: scale)
             return LoadedImage(image: image)
         }
+        
         inFlight[key] = task
 
         do {
@@ -53,6 +56,7 @@ actor ImagePipeline {
 
     private nonisolated static func downsample(data: Data, targetSize: CGSize, scale: CGFloat) throws -> UIImage {
         let sourceOptions = [kCGImageSourceShouldCache: false] as CFDictionary
+        
         guard let source = CGImageSourceCreateWithData(data as CFData, sourceOptions) else {
             throw URLError(.cannotDecodeContentData)
         }
@@ -68,6 +72,11 @@ actor ImagePipeline {
         guard let cgImage = CGImageSourceCreateThumbnailAtIndex(source, 0, options) else {
             throw URLError(.cannotDecodeContentData)
         }
-        return UIImage(cgImage: cgImage, scale: scale, orientation: .up)
+        
+        return UIImage(
+            cgImage: cgImage,
+            scale: scale,
+            orientation: .up
+        )
     }
 }
